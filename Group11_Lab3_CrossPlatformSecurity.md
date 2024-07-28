@@ -133,6 +133,19 @@ Storing Firebase keys in .env files separates sensitive data from the applicatio
 
 ### 6. Reflection
 
+During the security update of the Totally Security Math App, we identified and fixed several serious vulnerabilities, significantly enhancing the app's security.
+
+Initially, passwords and sensitive information were stored in plain text, making them easy targets for attackers. We addressed this by using Firebase to store hashed passwords securely, ensuring data remains unreadable without the hash key.
+
+The app used static credentials and client-side validation, making it vulnerable to attacks. We improved security by implementing server-side authentication and masking passwords, ensuring secure user verification and preventing unauthorized access.
+
+Previously, user inputs were processed without proper validation, exposing the app to code injection attacks. We resolved this by avoiding functions like eval() and enforcing strict input validation using math.evaluate(), preventing malicious code from altering data.
+
+Improper input handling was another major vulnerability. By implementing thorough input validation, we ensured only safe, correctly formatted data is processed, preventing attacks that exploit unvalidated inputs.
+
+Adopting secure coding practices was crucial. By avoiding hardcoding sensitive information, implementing proper error handling, and conducting regular security audits, we improved the app's security and maintainability.
+
+Overall, these security improvements have significantly strengthened the Totally Security Math App, making it more secure and reliable. This project highlighted the importance of proactive security measures and ongoing assessments to maintain a secure application environment.
 
 ### 7. Modules Required to Execute the Updated Application
 
